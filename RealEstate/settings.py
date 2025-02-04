@@ -29,7 +29,7 @@ DEBUG = True
 AUTH_USER_MODEL = 'Land.User'
 
 ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['https://backend-gqfp.onrender.com ', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['https://backend-gqfp.onrender.com', '127.0.0.1', 'localhost']
 
 # URL ya static files
 STATIC_URL = '/assets/'
