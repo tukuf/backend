@@ -28,6 +28,8 @@ SECRET_KEY = 'django-insecure-06#e(!6k&(d39&qkb-m*u)u_zo)xa@4ryb+9eg66xcmirrxfwm
 DEBUG = True
 AUTH_USER_MODEL = 'Land.User'
 
+ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://backend-gqfp.onrender.com', '127.0.0.1', 'localhost']
 
 ALLOWED_HOSTS = ['https://backend-gqfp.onrender.com', '127.0.0.1', 'localhost']
 ALLOWED_HOSTS = []
