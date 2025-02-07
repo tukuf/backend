@@ -28,9 +28,8 @@ SECRET_KEY = 'django-insecure-mt8dwjslum!+f&f+yp(ek+bh+z*^3=3^x=^u_s&+dlie34_(18
 DEBUG = True
 AUTH_USER_MODEL = 'Land.User'
 
-ALLOWED_HOSTS = ['backend-gqfp.onrender.com', 'localhost', '127.0.0.1', '*']  
-
 ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS_ORIGIN = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -61,6 +60,29 @@ SIMPLE_JWT = {
     'ALGORITHM': 'HS256',
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
+CORS_ALLOWED_ORIGINS = [
+    "https://tukufsystem.azurewebsites.net",  
+    "http://localhost:3000", 
+]
+
+CORS_ALLOW_CREDENTIALS = True  # If your frontend needs to send cookies or authentication headers
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+
+CORS_ALLOW_HEADERS = [
+    "authorization",
+    "content-type",
+    "accept",
+    "x-csrftoken",
+    "x-requested-with",
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,17 +96,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     
 ]
-
-CORS_ALLOWED_ORIGINS = [
-    "https://landsystemwithtukufjr.netlify.app/",  # Your allowed origin
-]
-
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://backend-gqfp.onrender.com',
-    'https://backend-gqfp.onrender.com',  # Include the non-https version if necessary
-]
-
 
 
 ROOT_URLCONF = 'RealEstate.urls'
